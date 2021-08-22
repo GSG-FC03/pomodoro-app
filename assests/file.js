@@ -36,7 +36,7 @@ heySec.textContent = "00";
 heyMin.textContent = 25;
 breakMineut.textContent = 5;
 breakSecond.textContent = "00";
-let counter = 0;
+let counter = 3;
 count.textContent = `round: ${counter}`;
 
 // add event click to the start btn
@@ -45,7 +45,9 @@ var startTimer ;
 
 start.addEventListener("click", () => {
 
-  startTimer= setInterval(incrementTime, 1000)
+  startTimer= setInterval(incrementTime, 10)
+  heyMin.textContent = 24;
+heySec.textContent = 59;
 
         start.style.display= "none";
        stop.style.display="flex"
@@ -96,7 +98,7 @@ function incrementTime(){
 
    clearInterval()
 // check if round => 4 break will change => 14
-   showBreak()
+showBreak
     
 }
 
@@ -157,7 +159,8 @@ function incrementTime(){
         counter++
         count.textContent = counter;
         resetTimer()
-      
+        stopInterval() 
+        
       }
  }
 
@@ -165,7 +168,7 @@ function incrementTime(){
  function showBreak(){
 
     if(count.textContent >= 4 ){
-      breakMineut.textContent = "5";
+      
       shortBreak =14
 
     }
