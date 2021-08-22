@@ -45,7 +45,7 @@ var startTimer ;
 
 start.addEventListener("click", () => {
 
-  startTimer= setInterval(incrementTime, 10)
+  startTimer= setInterval(incrementTime, 1000)
 
         start.style.display= "none";
        stop.style.display="flex"
@@ -149,11 +149,13 @@ function incrementTime(){
     }
  
  
-//  it's add 1 to the counter every round 
+//  it's add 1 to the counter every round & add alert to show you finished works
  function plusCounter(){
     if (heyMin.textContent == 0 && heyMin.textContent== 0 && breakMineut.textContent == 0 && breakSecond.textContent== 0){
+        backToWorkSound.play()
+        alert ("you fineshed 1 round ")
         counter++
-        count.textContent = `round: ${counter}`;
+        count.textContent = counter;
         resetTimer()
       
       }
@@ -163,7 +165,9 @@ function incrementTime(){
  function showBreak(){
 
     if(count.textContent >= 4 ){
+      breakMineut.textContent = "5";
       shortBreak =14
+
     }
 }
 
