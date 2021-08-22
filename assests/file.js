@@ -45,7 +45,7 @@ var startTimer ;
 
 start.addEventListener("click", () => {
 
-  startTimer= setInterval(incrementTime, 10)
+  startTimer= setInterval(incrementTime, 1000)
   heyMin.textContent = 24;
 heySec.textContent = 59;
 
