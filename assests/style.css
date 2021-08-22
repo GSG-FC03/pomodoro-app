@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(120deg, #262626, #4d4d4d) fixed;
+    color: white;
+}
+#head-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    background-color: wheat;
+    color:crimson;
+    padding: 60px;
+
+}
+#break-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    background-color: wheat;
+    color:crimson;
+    padding: 60px;
+}
+#container span, #break-container span{
+    font-size: 22px;
+}
+#min , #b-min{
+    padding: 10px;
+}
+#sec, #b-sec{ 
+    padding: 10px;
+}
+#seperator, #b-seperator{
+    padding: 10px;
+}
+#btn{
+    padding: 40px;
+    color: brown;
+}
+
+#btn{
+    padding: 40px;
+    color: brown;
+}
+
+.stop{
+    padding: 40px;
+    color: brown;
+
+   
+}
+.stop-hide{
+    display: none;
+
+}
+#reset{
+    padding: 40px;
+    color: brown;
+
+}
+.btn-style{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    margin: 15px;
+    
+}
+.hide-container{
+    display: none;
+}
