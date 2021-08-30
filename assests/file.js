@@ -29,14 +29,14 @@ let secNumBreak = 59;
 let bMin = 5;
 let shortBreak = breakMineut.textContent=5;
 let longBreak = 14;
-stop.style.display= "none"
+
 
 // start the timer with these values 
 heySec.textContent = "00";
 heyMin.textContent = 25;
 breakMineut.textContent = 5;
 breakSecond.textContent = "00";
-let counter = 3;
+let counter = 0;
 count.textContent = `round: ${counter}`;
 
 // add event click to the start btn
@@ -45,9 +45,9 @@ var startTimer ;
 
 start.addEventListener("click", () => {
 
-  startTimer= setInterval(incrementTime, 1000)
-  heyMin.textContent = 24;
-heySec.textContent = 59;
+  startTimer= setInterval(incrementTime, 10)
+  heyMin.textContent = minNum;
+heySec.textContent = secNumBreak;
 
         start.style.display= "none";
        stop.style.display="flex"
@@ -60,7 +60,7 @@ stop.addEventListener("click", stopInterval)
 
 function stopInterval() {
   clearInterval(startTimer);
-  startTimer = undefined;
+
   start.style.display= "flex";
   stop.style.display="none"
   btnSound.play()
@@ -70,6 +70,7 @@ function stopInterval() {
 reset.addEventListener("click", resetTimer)
 
 function resetTimer(){
+  clearInterval(startTimer)
     start.style.display= "flex";
     stop.style.display="none"
     heySec.textContent = "00";
@@ -98,8 +99,8 @@ function incrementTime(){
 
    clearInterval()
 // check if round => 4 break will change => 14
-showBreak
-    
+
+showBreak()
 }
 
 
@@ -136,8 +137,11 @@ showBreak
           if(secNumBreak <= 0){
             shortBreak--
             secNumBreak =59  
+            
           }
+      
           breakMineut.textContent= shortBreak
+          
     
         }
         else if(shortBreak !=0 && secNumBreak == 0){
@@ -146,6 +150,7 @@ showBreak
          breakMineut.textContent = shortBreak
          breakSecond.textContent = secNumBreak;
         }
+      
       }
   
     }
@@ -167,10 +172,15 @@ showBreak
 // check if round => 4 break will change => 14
  function showBreak(){
 
-    if(count.textContent >= 4 ){
-      
+    if(count.textContent >= 1){
       shortBreak =14
-
+   
     }
+    if(secNumBreak <= 0){
+      shortBreak--
+      secNumBreak =59  
+    }
+   
+    
 }
 
